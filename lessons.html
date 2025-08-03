@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>LearnHub | Lessons</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page-wrapper fade-in">
+            <header class="site-header">
+                <div class="logo">
+                    <img src="https://img.freepik.com/premium-vector/web-developer-logo-template_674356-207.jpg" alt="logo"/>
+                    <span class="brand">LearnHub</span>
+                </div>
+                 <nav class="nav">
+                    <a href="index.html" class="nav-item">Home</a>
+                    <a href="about.html" class="nav-item">About</a>
+                        <a href="courses.html" class="nav-item">Courses</a>
+                        <a href="lessons.html" class="nav-item">Lessons</a>
+                        <a href="videos.html" class="nav-item">Videos</a>
+                </nav>
+            </header>
+            <main class="content">
+                <div class="lesson-list" style="max-width:960px; margin: 60px auto; padding: 0 20px;">
+                    <h2>Lessons</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Interoduction to HTML</h3>
+
+                            <p>Learn the structure of web pages and basic tags.</p>
+                            <a href="lessons-html.html" class="slide-btn">Read Lessons</a>
+                        </div>
+                        <div class="card">
+                            <h3>Styling the CSS</h3>
+                            <p>Understand selectors, box model, and layouts.</p>
+                            <a href="lessons-css.html" class="slide-btn">Read Lesson</a>
+                        </div>
+                        </div>
+                </div>
+            </main>
+            <footer class="site-footer">
+                <p>&copy; 2025 LearnHub</p>
+            </footer>
+        </div>
+        <script src="main.js"></script>
+        <script>
+             const toggleA = document.getElementaryById("darkModeToggleAbout");
+            function applyThemeAbout(dark) {
+                if (dark) document.body.classList.add("dark");
+            }
+            const savedThemeA = localStorage.getItem("theme");
+            of  (savedThemeA === "dark") {
+                toggleA.checked = true;
+                applyThemeAbout(true);
+            }
+            toggelA.addEventListener("change", () => {
+                applyThemeAbout(toggelA.checked);
+                localStorage.setItem("them", toggelA.checked?"dark" : "light");
+            });
+        </script>
+    </body>
+</html>

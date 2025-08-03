@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearnHub • Introduction to HTML</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper fade-in">
+    <header class="site-header">
+      <div class="logo">
+        <a href="index.html" class="home-icon" aria-label="Home">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12L12 3l9 9v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4H9v4a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8z"/>
+          </svg>
+        </a>
+        <img src="https://img.freepik.com/premium-vector/web-developer-logo-template_674356-207.jpg" alt="Logo" />
+        <span class="brand">LearnHub</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-item">Home</a>
+                    <a href="about.html" class="nav-item">About</a>
+                        <a href="courses.html" class="nav-item">Courses</a>
+                        <a href="lessons.html" class="nav-item">Lessons</a>
+                        <a href="videos.html" class="nav-item">Videos</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div style="max-width:900px; margin: 60px auto; padding: 0 20px;">
+        <h2>Introduction to HTML</h2>
+        <p>HTML (HyperText Markup Language) is the standard markup language used to create web pages. It defines the structure of content on the web by using tags.</p>
+
+        <h3>Basic Structure</h3>
+        <pre><code><!DOCTYPE html>
+<html>
+        <head>
+    <title>My First Page</title>
+        </head>
+  <body>
+    <h1>Hello World</h1>.
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+</code></pre>
+
+        <p>Every HTML document starts with <code><!DOCTYPE html></code> and has an <code><html></code> root. Inside it, the <code><head></code> holds metadata and the <code><body></code> contains visible content.</p>
+
+        <div style="margin: 32px 0; display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="lessons.html" class="slide-btn">Back to Lessons</a>
+          <a href="lessons-css.html" class="slide-btn">Next: CSS</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 LearnHub.</p>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    const toggle = document.getElementById("darkModeToggleLessonHTML");
+    function applyTheme(dark) {
+      if (dark) document.body.classList.add("dark");
+      else document.body.classList.remove("dark");
+    }
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") {
+      toggle.checked = true;
+      applyTheme(true);
+    }
+    toggle.addEventListener("change", () => {
+      applyTheme(toggle.checked);
+      localStorage.setItem("theme", toggle.checked ? "dark" : "light");
+    });
+  </script>
+</body>
+</html>
